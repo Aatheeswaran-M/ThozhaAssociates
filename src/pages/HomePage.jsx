@@ -224,10 +224,11 @@ function HomePage() {
                         href={item.href}
                         target="_blank"
                         rel="noreferrer"
-                        className="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/10 px-3 py-1.5 text-sm font-medium text-accent transition hover:bg-accent hover:text-white"
+                        title={item.label}
+                        aria-label={item.label}
+                        className="grid h-10 w-10 place-items-center rounded-full border border-accent/20 bg-accent/10 text-accent transition hover:bg-accent hover:text-white"
                       >
-                        <Icon size={14} />
-                        <span>{item.label}</span>
+                        <Icon size={15} />
                       </a>
                     )
                   })}
