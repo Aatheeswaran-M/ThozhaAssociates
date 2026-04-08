@@ -1,6 +1,5 @@
 import { ArrowRight, Menu, X } from 'lucide-react'
 import { useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
 
 import { NAV_LINKS } from '@/utils/constants'
 
@@ -67,9 +66,6 @@ function Navbar({ company }) {
           </nav>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <Link to="/admin" className="cta-secondary px-4 py-2 text-[11px]">
-              Admin
-            </Link>
             <a href="#quote" className="cta-primary px-4 py-2 text-[11px]">
               Get Free Quote
               <ArrowRight size={16} />
@@ -99,13 +95,6 @@ function Navbar({ company }) {
               </a>
             ))}
             <div className="flex flex-col gap-3 pt-3">
-              <Link
-                to="/admin"
-                className="cta-secondary justify-center"
-                onClick={() => setOpen(false)}
-              >
-                Admin Dashboard
-              </Link>
               <a
                 href="#quote"
                 className="cta-primary justify-center"

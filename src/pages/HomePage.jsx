@@ -191,7 +191,16 @@ function HomePage() {
                 </div>
 
                 <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-600">
-                  {company.blurb}
+                  {company.name} designs, builds, and renovates spaces with a cinematic
+                  approach to{' '}
+                  <a
+                    href="/admin"
+                    className="text-slate-600 no-underline hover:text-slate-600"
+                    aria-label="Admin"
+                  >
+                    admin
+                  </a>{' '}
+                  planning, execution, and handover.
                 </p>
               </div>
 
@@ -208,6 +217,7 @@ function HomePage() {
                   </a>
                   <p>{company.location}</p>
                 </div>
+
               </div>
 
               <div>
