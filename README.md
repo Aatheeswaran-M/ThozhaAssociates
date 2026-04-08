@@ -1,4 +1,4 @@
-# Thozha Associates
+# ThozhaAssociates
 
 Animated full-stack construction website for Thozha Associates using React, Vite, Tailwind CSS, Framer Motion, GSAP ScrollTrigger, and Supabase.
 
