@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #0f172a;
+  background: #f5f9ff;
+  font-family: 'Sora', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+html {
+  background: #f5f9ff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8fbff 0%, #edf4fb 100%);
+  color: #0f172a;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(10, 102, 194, 0.28);
+  color: #f8fbff;
+}
+
+@layer base {
+  body {
+    @apply bg-canvas text-ink antialiased;
+  }
+
+  a {
+    @apply transition-colors duration-300;
+  }
+
+  img {
+    @apply block max-w-full;
+  }
+
+  input,
+  textarea,
+  select,
+  button {
+    font: inherit;
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-space {
+    @apply py-14 sm:py-16 lg:py-20;
+  }
+
+  .panel {
+    @apply relative overflow-hidden bg-white shadow-soft;
+    border: 1px solid rgba(10, 102, 194, 0.15);
+    border-radius: 1rem;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-sm border border-accent/35 bg-accent/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-accentDark;
+  }
+
+  .cta-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-accent bg-accent px-5 py-2.5 font-semibold uppercase tracking-[0.08em] text-white shadow-glow transition duration-300 hover:border-accentDark hover:bg-accentDark;
+  }
+
+  .cta-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border border-slate-300 bg-white px-5 py-2.5 font-semibold uppercase tracking-[0.08em] text-slate-700 transition duration-300 hover:border-accent/40 hover:text-accent;
+  }
+
+  .grid-pattern {
+    background-image: linear-gradient(rgba(10, 102, 194, 0.12) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(10, 102, 194, 0.12) 1px, transparent 1px);
+    background-size: 36px 36px;
+  }
+
+  .input-field {
+    @apply w-full rounded-2xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-500 transition focus:border-accent/70 focus:bg-white;
+  }
+
+  .textarea-field {
+    @apply input-field min-h-[140px] resize-none;
+  }
+
+  .badge-pill {
+    @apply inline-flex items-center gap-2 rounded-md border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-700;
+  }
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(10, 102, 194, 0.65) rgba(148, 163, 184, 0.25);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(148, 163, 184, 0.25);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background: rgba(10, 102, 194, 0.65);
+}
