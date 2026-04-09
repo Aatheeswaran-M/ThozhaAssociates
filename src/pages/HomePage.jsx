@@ -11,6 +11,7 @@ import ProjectsSection from '@/components/ProjectsSection'
 import ServicesSection from '@/components/ServicesSection'
 import { useEffect } from 'react'
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 import { useHomeData } from '@/hooks/useHomeData'
 import { buildProjectHeight, formatPhoneHref } from '@/utils/helpers'
 
@@ -120,7 +121,7 @@ function HomePage() {
     const brandName = company?.name || 'Thozha Associates'
     document.title = `${brandName} | Building Your Dreams in Pollachi`
 
-    const iconHref = company?.logo_url || '/favicon.svg'
+    const iconHref = company?.logo_url || `${import.meta.env.BASE_URL}favicon.svg`
     const iconRels = ['icon', 'shortcut icon', 'apple-touch-icon']
 
     iconRels.forEach((relValue) => {
@@ -193,13 +194,13 @@ function HomePage() {
                 <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-600">
                   {company.name} designs, builds, and renovates spaces with a cinematic
                   approach to{' '}
-                  <a
-                    href="/admin"
+                  <Link
+                    to="/admin"
                     className="text-slate-600 no-underline hover:text-slate-600"
                     aria-label="Admin"
                   >
                     admin
-                  </a>{' '}
+                  </Link>{' '}
                   planning, execution, and handover.
                 </p>
               </div>
