@@ -5,8 +5,10 @@ const AdminPage = lazy(() => import('@/pages/AdminPage'))
 const HomePage = lazy(() => import('@/pages/HomePage'))
 
 function App() {
+  const basePath = import.meta.env.BASE_URL.replace(/\/$/, '') || '/'
+
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basePath}>
       <Suspense
         fallback={
           <div className="grid min-h-screen place-items-center bg-canvas text-ink">
